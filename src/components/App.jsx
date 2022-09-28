@@ -13,6 +13,7 @@ import LoginPage from '../pages/LoginPage';
 import RegistrPage from '../pages/RegistrPage';
 import authSelectors from '../redux/auth/auth-selectors';
 import Form from './Form/Form';
+// import ContactList from './ContactList/ContactList';
 
 // const Home = lazy(() => import('../pages/Home'));
 // const RegistrPage = lazy(() => import('../pages/RegistrPage'));
@@ -44,7 +45,7 @@ export default function App() {
             <Route path="/login" element={<LoginPage />} />
           </Route>
           <Route path="/contacts" element={<PrivateRoute />}>
-            <Route path="/contacts" element={<Form />} />
+            <Route path="/contacts" element={<ContactsPage />} />
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
