@@ -40,7 +40,13 @@ export default function RegistrPage() {
       <form onSubmit={handleSubmit} autoComplete="off">
         <label>
           Имя
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            required
+          />
         </label>
 
         <label>
@@ -50,6 +56,7 @@ export default function RegistrPage() {
             name="email"
             value={email}
             onChange={handleChange}
+            required
           />
         </label>
 
@@ -60,6 +67,7 @@ export default function RegistrPage() {
             name="password"
             value={password}
             onChange={handleChange}
+            required
           />
         </label>
 

@@ -1,15 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
+import { NavigLink } from './Navigator/Navigator.styled';
 
 export default function AuthNav() {
   return (
     <div>
-      <NavLink end to="/register">
-        Регистрация
-      </NavLink>
-      <NavLink end to="/login">
-        Логин
-      </NavLink>
+      <nav>
+        <NavigLink to="/register">Регистрация</NavigLink>
+        <NavigLink to="/login">Логин</NavigLink>
+      </nav>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { authOperations } from '../redux/auth';
+import authOperations from '../redux/auth/auth-operations';
 
 export default function LoginPage() {
   const dispatch = useDispatch();
@@ -41,6 +41,7 @@ export default function LoginPage() {
             name="email"
             value={email}
             onChange={handleChange}
+            required
           />
         </label>
 
@@ -51,6 +52,7 @@ export default function LoginPage() {
             name="password"
             value={password}
             onChange={handleChange}
+            required
           />
         </label>
 

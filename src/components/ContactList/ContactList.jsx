@@ -4,8 +4,8 @@ import contactsSelectors from '../../redux/contact/contacts-selectors';
 import contactsOperations from '../../redux/contact/contacts-operations';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import Form from 'components/Form/Form';
-import Filter from '../Filter/Filter';
+// import Form from 'components/Form/Form';
+// import Filter from '../Filter/Filter';
 
 export default function ContactList() {
   const contacts = useSelector(contactsSelectors.getContacts);
@@ -33,17 +33,10 @@ export default function ContactList() {
   console.log(filterListContact);
   return (
     <div>
-      Phonebook
-      <Form />
-      <Filter />{' '}
       <ul>
         {filterListContact.map(contact => {
           return (
-            <Contactelement
-              key={contact.id}
-              contact={contact}
-              // handlerDelet={getDeletContact}
-            >
+            <Contactelement key={contact.id} contact={contact}>
               {contact.name}:{contact.number}
               <Button onClick={() => getDeletContact(contact.id)}>Delet</Button>
             </Contactelement>
