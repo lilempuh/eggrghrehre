@@ -11,3 +11,8 @@ export const StyledLink = styled(Link)`
     color: #2196f3;
   }
 `;
+export const Welcom = styled.h1`
+  color: #2196f3;
+  margin: 20px auto;
+  text-align: center;
+`;

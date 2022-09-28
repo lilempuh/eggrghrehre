@@ -1,8 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import AppBar from './AppBar';
+import AppBar from './AppBar/AppBar';
 import { Container } from './Container/Container';
+
 import authOperations from '../redux/auth/auth-operations';
 import PublicRoute from './PublicRoute/PablicRoute';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
@@ -10,10 +11,10 @@ import authSelectors from '../redux/auth/auth-selectors';
 
 import { lazy } from 'react';
 
-const Home = lazy(() => import('../pages/Home'));
-const RegistrPage = lazy(() => import('../pages/RegistrPage'));
-const LoginPage = lazy(() => import('../pages/LoginPage'));
-const ContactsPage = lazy(() => import('../pages/ContactsPage'));
+const Home = lazy(() => import('../pages/Home/Home'));
+const RegistrPage = lazy(() => import('../pages/RegistrPage/RegistrPage'));
+const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
+const ContactsPage = lazy(() => import('../pages/ContactsPage/ContactsPage'));
 
 export default function App() {
   const dispatch = useDispatch();

@@ -1,18 +1,6 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  // height: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // margin: 0 auto;
-  // color: #010101;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 16px;
-  padding-bottom: 24px;
-
   * {
     box-sizing: border-box;
   }

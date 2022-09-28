@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import authOperations from '../redux/auth/auth-operations';
+import authOperations from '../../redux/auth/auth-operations';
+import { Title, Form, Input, Button } from './RegistrPage.styled';
 
 export default function RegistrPage() {
   const dispatch = useDispatch();
@@ -35,12 +36,12 @@ export default function RegistrPage() {
 
   return (
     <div>
-      <h1>Страница регистрации</h1>
+      <Title>Страница регистрации</Title>
 
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <Form onSubmit={handleSubmit} autoComplete="off">
         <label>
           Имя
-          <input
+          <Input
             type="text"
             name="name"
             value={name}
@@ -51,7 +52,7 @@ export default function RegistrPage() {
 
         <label>
           Почта
-          <input
+          <Input
             type="email"
             name="email"
             value={email}
@@ -62,7 +63,7 @@ export default function RegistrPage() {
 
         <label>
           Пароль
-          <input
+          <Input
             type="password"
             name="password"
             value={password}
@@ -71,8 +72,8 @@ export default function RegistrPage() {
           />
         </label>
 
-        <button type="submit">Зарегистрироваться</button>
-      </form>
+        <Button type="submit">Зарегистрироваться</Button>
+      </Form>
     </div>
   );
 }

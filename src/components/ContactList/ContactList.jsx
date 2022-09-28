@@ -1,5 +1,5 @@
 import React from 'react';
-import { Contactelement, Button } from './ContactList.styled';
+import { Contactelement, Button, Wrapper } from './ContactList.styled';
 import contactsSelectors from '../../redux/contact/contacts-selectors';
 import contactsOperations from '../../redux/contact/contacts-operations';
 import { useSelector, useDispatch } from 'react-redux';
@@ -32,17 +32,17 @@ export default function ContactList() {
 
   console.log(filterListContact);
   return (
-    <div>
+    <Wrapper>
       <ul>
         {filterListContact.map(contact => {
           return (
             <Contactelement key={contact.id} contact={contact}>
-              {contact.name}:{contact.number}
+              {contact.name} : {contact.number}
               <Button onClick={() => getDeletContact(contact.id)}>Delet</Button>
             </Contactelement>
           );
         })}
       </ul>
-    </div>
+    </Wrapper>
   );
 }
